@@ -9,14 +9,21 @@ public class LinerSearch{
 		for(int i=0;i<n;i++){
 			arr[i]=sc.nextInt();
 		}
-		int searchele=sc.nextInt();
-		for(int i=0;i<n;i++){
-			if(arr[i]==searchele){
-				System.out.println("Element Founded: Index- "+i);
-				return;
-			}
-		}
-		System.out.println("Element Not Found ");
+		int ele=sc.nextInt();
+		System.out.println(linearSearch(arr,ele));
+		System.out.println(BinearySearch(arr,ele));
+		
 	
 	}
+	private static int linearSearch(int []arr,int ele){
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]==ele){
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	
+	
 }
